@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub 中文翻译",
+  "version": "0.1.0",
+  "description": "手动将 GitHub 页面翻译为简体中文。",
+  "permissions": ["storage"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html"},
+  "options_page": "options.html",
+  "content_scripts": [{"matches": ["https://github.com/*"], "js": ["content.js"]}]
+}
